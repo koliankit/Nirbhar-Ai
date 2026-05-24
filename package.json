@@ -1,0 +1,37 @@
+{
+  "name": "nirbhar-ai",
+  "version": "1.0.0",
+  "description": "Nirbhar AI — Enterprise Intelligence Powered by AI",
+  "main": "index.html",
+  "homepage": "https://nirbhar.ai",
+  "author": "Nirbhar AI Team",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "build": "echo 'Static project — no build required'",
+    "lint": "echo 'Add linting as needed'"
+  },
+  "keywords": [
+    "nirbhar-ai",
+    "enterprise-ai",
+    "ai-platform",
+    "business-intelligence",
+    "automation",
+    "conversational-ai"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.0.0"
+  },
+  "config": {
+    "brand": "Nirbhar AI",
+    "tagline": "Enterprise Intelligence Powered by AI",
+    "primaryColor": "#00E5FF",
+    "accentColor": "#0066FF"
+  }
+}

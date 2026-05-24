@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nirbhar AI — Enterprise Intelligence Powered by AI. Transforming business operations through intelligent automation, real-time insights, and AI-driven productivity." />
+  <meta name="keywords" content="Nirbhar AI, enterprise AI, business automation, AI assistant, data analysis, productivity AI" />
+  <meta name="author" content="Nirbhar AI" />
+  <meta property="og:title" content="Nirbhar AI — Enterprise Intelligence" />
+  <meta property="og:description" content="Transforming business operations through intelligent automation, real-time insights, and AI-driven productivity." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nirbhar AI — Enterprise Intelligence" />
+  <title>Nirbhar AI — Enterprise Intelligence Powered by AI</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00E5FF"/>
+                <stop offset="100%" stop-color="#0066FF"/>
+              </linearGradient>
+            </defs>
+            <path d="M20 4L34 12V28L20 36L6 28V12L20 4Z" stroke="url(#logoGrad)" stroke-width="2" fill="none"/>
+            <path d="M20 10L28 15V25L20 30L12 25V15L20 10Z" fill="url(#logoGrad)" opacity="0.3"/>
+            <circle cx="20" cy="20" r="4" fill="url(#logoGrad)"/>
+            <line x1="20" y1="4" x2="20" y2="10" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="20" y1="30" x2="20" y2="36" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="6" y1="12" x2="12" y2="15" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="28" y1="25" x2="34" y2="28" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="34" y1="12" x2="28" y2="15" stroke="url(#logoGrad)" stroke-width="1.5"/>
+            <line x1="12" y1="25" x2="6" y2="28" stroke="url(#logoGrad)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Nirbhar</span>
+          <span class="logo-ai">AI</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a href="#" class="btn-ghost">Sign In</a>
+        <a href="#" class="btn-primary">Request Demo</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#" class="btn-primary mobile-cta">Request Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Enterprise AI Platform · Now Available
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line-1">Nirbhar AI</span>
+        <span class="title-line-2">Enterprise Intelligence</span>
+        <span class="title-line-3">Powered by <em>AI</em></span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Transforming business operations through intelligent automation,<br class="desktop-br"/>
+        real-time insights, and AI-driven productivity.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#" class="btn-hero-primary">
+          <span>Start Free Trial</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="btn-hero-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16"/></svg>
+          <span>Watch Demo</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Accuracy Rate</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Enterprise Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="10">0</span><span class="stat-suffix">x</span>
+          <span class="stat-label">Faster Insights</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+          <span class="stat-label">AI Support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating dashboard preview -->
+    <div class="hero-dashboard">
+      <div class="dashboard-window">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="window-title">Nirbhar AI · Dashboard</span>
+          <div class="window-status"><span class="status-pulse"></span>Live</div>
+        </div>
+        <div class="window-body">
+          <div class="dash-sidebar">
+            <div class="dash-nav-item active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div class="dash-nav-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="dash-nav-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div class="dash-nav-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+          </div>
+          <div class="dash-main">
+            <div class="dash-top-row">
+              <div class="dash-metric">
+                <span class="metric-label">Queries Today</span>
+                <span class="metric-value">12,847</span>
+                <span class="metric-change up">↑ 23%</span>
+              </div>
+              <div class="dash-metric">
+                <span class="metric-label">Automations</span>
+                <span class="metric-value">3,291</span>
+                <span class="metric-change up">↑ 18%</span>
+              </div>
+              <div class="dash-metric">
+                <span class="metric-label">Docs Processed</span>
+                <span class="metric-value">847</span>
+                <span class="metric-change up">↑ 31%</span>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <div class="chart-label">Real-time Activity</div>
+              <div class="chart-bars">
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar active"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+              </div>
+            </div>
+            <div class="dash-ai-chat">
+              <div class="chat-message ai">
+                <span class="chat-avatar">N</span>
+                <span class="chat-text">Q3 revenue is up 23%. Top driver: APAC region (+41%). Recommend expanding sales team.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ LOGOS / TRUST ═══════════════════════════ -->
+  <section class="trust-section">
+    <div class="trust-container">
+      <p class="trust-label">Trusted by leading enterprises worldwide</p>
+      <div class="logo-scroll">
+        <div class="logo-track">
+          <div class="trust-logo">Infosys</div>
+          <div class="trust-logo">TCS</div>
+          <div class="trust-logo">Wipro</div>
+          <div class="trust-logo">HCL Tech</div>
+          <div class="trust-logo">Tech Mahindra</div>
+          <div class="trust-logo">HDFC Bank</div>
+          <div class="trust-logo">Reliance</div>
+          <div class="trust-logo">Bajaj</div>
+          <!-- Duplicate for seamless loop -->
+          <div class="trust-logo">Infosys</div>
+          <div class="trust-logo">TCS</div>
+          <div class="trust-logo">Wipro</div>
+          <div class="trust-logo">HCL Tech</div>
+          <div class="trust-logo">Tech Mahindra</div>
+          <div class="trust-logo">HDFC Bank</div>
+          <div class="trust-logo">Reliance</div>
+          <div class="trust-logo">Bajaj</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FEATURES ═══════════════════════════ -->
+  <section class="features-section" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Core Capabilities</span>
+        <h2 class="section-title">Everything your enterprise needs,<br/>powered by AI</h2>
+        <p class="section-subtitle">Nirbhar AI brings seven powerful capabilities into one unified platform — designed for scale, security, and speed.</p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card featured" data-aos="fade-up">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+              <path d="M16 32C16 32 18 26 24 26C30 26 32 32 32 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 24C8 15.16 15.16 8 24 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+              <path d="M40 24C40 32.84 32.84 40 24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>Intelligent Conversational AI</h3>
+          <p>Context-aware conversations that understand your business domain. Ask anything, get precise answers drawn from your enterprise knowledge base.</p>
+          <div class="feature-tags">
+            <span>NLP</span><span>Context-aware</span><span>Multi-turn</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="28" width="6" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="18" y="20" width="6" height="20" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="28" y="14" width="6" height="26" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="38" y="8" width="6" height="32" rx="1" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 12L18 8L28 14L40 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3>Data Analysis & Report Generation</h3>
+          <p>Transform raw data into actionable reports instantly. Generate executive summaries, trend analyses, and visual dashboards in seconds.</p>
+          <div class="feature-tags">
+            <span>Auto-reports</span><span>Trend analysis</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 34L14 40H34L32 34" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M19 20L22 23L29 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Employee Productivity Support</h3>
+          <p>Supercharge your workforce with AI-powered tools for scheduling, task management, HR queries, and personalized productivity coaching.</p>
+          <div class="feature-tags">
+            <span>HR AI</span><span>Task mgmt</span><span>Coaching</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 8H36C37.1 8 38 8.9 38 10V32C38 33.1 37.1 34 36 34H12C10.9 34 10 33.1 10 32V10C10 8.9 10.9 8 12 8Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 16H32M16 21H32M16 26H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M26 38L24 34H36L34 38" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>Document Understanding & Summarization</h3>
+          <p>Upload contracts, reports, manuals — Nirbhar AI reads, understands, and summarizes complex documents in moments.</p>
+          <div class="feature-tags">
+            <span>OCR</span><span>Summarization</span><span>Q&A</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+              <path d="M24 10V14M24 34V38M10 24H14M34 24H38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2"/>
+              <path d="M18 18L21 21M27 27L30 30M30 18L27 21M21 27L18 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3>Task Automation</h3>
+          <p>Build intelligent workflows that run themselves. Automate repetitive tasks, approval chains, data entry, and cross-system operations.</p>
+          <div class="feature-tags">
+            <span>Workflows</span><span>Integrations</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 36L16 22L22 28L30 16L42 36H6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="16" cy="22" r="2" fill="currentColor"/>
+              <circle cx="22" cy="28" r="2" fill="currentColor"/>
+              <circle cx="30" cy="16" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Real-Time Business Insights</h3>
+          <p>Live dashboards powered by AI that surface anomalies, opportunities, and risks before they impact your business.</p>
+          <div class="feature-tags">
+            <span>Live data</span><span>Anomaly detect</span>
+          </div>
+        </div>
+
+        <div class="feature-card full-width" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="14" width="28" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M18 14V12C18 10.9 18.9 10 20 10H28C29.1 10 30 10.9 30 12V14" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 22L23 25L28 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="full-width-content">
+            <h3>Secure Company Knowledge Assistance</h3>
+            <p>Your proprietary data stays private. Nirbhar AI learns from your internal knowledge base — policies, SOPs, product docs — and delivers accurate, compliant answers only to authorized users.</p>
+            <div class="feature-tags">
+              <span>SOC 2 Type II</span><span>GDPR</span><span>Role-based Access</span><span>Encrypted</span><span>On-premise option</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PLATFORM ═══════════════════════════ -->
+  <section class="platform-section" id="platform">
+    <div class="section-container">
+      <div class="platform-grid">
+        <div class="platform-content">
+          <span class="section-tag">The Platform</span>
+          <h2 class="section-title left">One AI platform.<br/>Infinite enterprise use cases.</h2>
+          <p class="section-subtitle left">Nirbhar AI connects to your existing tools, data sources, and workflows — acting as the intelligent brain that ties your entire enterprise stack together.</p>
+
+          <div class="platform-steps">
+            <div class="platform-step active" data-step="1">
+              <div class="step-number">01</div>
+              <div class="step-content">
+                <h4>Connect Your Data Sources</h4>
+                <p>Integrate with databases, CRMs, ERPs, documents, and APIs in minutes.</p>
+              </div>
+            </div>
+            <div class="platform-step" data-step="2">
+              <div class="step-number">02</div>
+              <div class="step-content">
+                <h4>AI Learns Your Business</h4>
+                <p>Nirbhar AI indexes and understands your company knowledge, terminology, and workflows.</p>
+              </div>
+            </div>
+            <div class="platform-step" data-step="3">
+              <div class="step-number">03</div>
+              <div class="step-content">
+                <h4>Deploy Across Teams</h4>
+                <p>Roll out to any department — finance, HR, ops, sales — with role-based access controls.</p>
+              </div>
+            </div>
+            <div class="platform-step" data-step="4">
+              <div class="step-number">04</div>
+              <div class="step-content">
+                <h4>Measure & Optimize</h4>
+                <p>Track AI usage, quality, and ROI with real-time analytics dashboards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="platform-visual">
+          <div class="integration-hub">
+            <div class="hub-center">
+              <div class="hub-logo">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 4L34 12V28L20 36L6 28V12L20 4Z" stroke="url(#logoGrad2)" stroke-width="2" fill="none"/>
+                  <circle cx="20" cy="20" r="4" fill="url(#logoGrad2)"/>
+                  <defs>
+                    <linearGradient id="logoGrad2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#00E5FF"/><stop offset="100%" stop-color="#0066FF"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span>Nirbhar AI</span>
+              </div>
+            </div>
+            <div class="hub-orbit">
+              <div class="orbit-item"></div>
+                <div class="orbit-dot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  <span>ERP</span>
+                </div>
+              </div>
+              <div class="orbit-item"></div>
+                <div class="orbit-dot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <span>CRM</span>
+                </div>
+              </div>
+              <div class="orbit-item"></div>
+                <div class="orbit-dot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                  <span>DB</span>
+                </div>
+              </div>
+              <div class="orbit-item"></div>
+                <div class="orbit-dot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span>Docs</span>
+                </div>
+              </div>
+              <div class="orbit-item"></div>
+                <div class="orbit-dot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <span>Email</span>
+                </div>
+              </div>
+              <div class="orbit-item"></div>
+                <div class="orbit-dot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  <span>API</span>
+                </div>
+              </div>
+              <div class="orbit-item"></div>
+                <div class="orbit-dot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                  <span>Cloud</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ INSIGHTS / TESTIMONIALS ═══════════════════════════ -->
+  <section class="insights-section" id="insights">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">What Enterprises Say</span>
+        <h2 class="section-title">Transforming businesses across India</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>Nirbhar AI reduced our report generation time from 3 days to 20 minutes. The ROI was visible within the first month of deployment.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RK</div>
+            <div>
+              <strong>Rajesh Kumar</strong>
+              <span>CTO, FinTech Innovations Ltd</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card featured-quote">
+          <div class="quote-mark">"</div>
+          <p>We deployed Nirbhar AI across 5,000 employees. The productivity gains were immediate — HR queries dropped by 70%, and our team could focus on strategic work.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PS</div>
+            <div>
+              <strong>Priya Sharma</strong>
+              <span>Head of Digital, Global Manufacturing Co.</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p>Document processing that took weeks now takes hours. Our compliance team loves the accuracy and audit trail Nirbhar AI provides.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div>
+              <strong>Amit Mehta</strong>
+              <span>VP Operations, Logistics Corp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECURITY ═══════════════════════════ -->
+  <section class="security-section" id="security">
+    <div class="section-container">
+      <div class="security-grid">
+        <div class="security-content">
+          <span class="section-tag">Enterprise Security</span>
+          <h2 class="section-title left">Built with security at its core</h2>
+          <p class="section-subtitle left">Your data never trains our models. Nirbhar AI operates with military-grade security standards, giving enterprises complete peace of mind.</p>
+
+          <div class="security-badges">
+            <div class="security-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <div>
+                <strong>SOC 2 Type II</strong>
+                <span>Certified</span>
+              </div>
+            </div>
+            <div class="security-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <div>
+                <strong>AES-256</strong>
+                <span>Encryption at Rest</span>
+              </div>
+            </div>
+            <div class="security-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              <div>
+                <strong>GDPR Compliant</strong>
+                <span>Data Privacy</span>
+              </div>
+            </div>
+            <div class="security-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <div>
+                <strong>99.9% Uptime</strong>
+                <span>SLA Guaranteed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="security-visual">
+          <div class="security-shield">
+            <div class="shield-rings">
+              <div class="shield-ring r1"></div>
+              <div class="shield-ring r2"></div>
+              <div class="shield-ring r3"></div>
+            </div>
+            <div class="shield-center">
+              <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 5L50 15V32C50 43 40 52 30 55C20 52 10 43 10 32V15L30 5Z" stroke="url(#shieldGrad)" stroke-width="2" fill="none"/>
+                <path d="M20 30L27 37L40 24" stroke="url(#shieldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="shieldGrad" x1="10" y1="5" x2="50" y2="55" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#00E5FF"/><stop offset="100%" stop-color="#0066FF"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PRICING ═══════════════════════════ -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2 class="section-title">Simple, transparent pricing</h2>
+        <p class="section-subtitle">Scale from startup to enterprise. Every plan includes our core AI engine.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price"><span class="currency">₹</span>9,999<span class="period">/mo</span></div>
+          <p class="plan-desc">For small teams getting started with enterprise AI</p>
+          <ul class="plan-features">
+            <li>Up to 10 users</li>
+            <li>Conversational AI</li>
+            <li>Document summarization</li>
+            <li>Basic analytics</li>
+            <li>Email support</li>
+          </ul>
+          <a href="#" class="btn-plan">Get Started</a>
+        </div>
+
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <div class="plan-name">Business</div>
+          <div class="plan-price"><span class="currency">₹</span>29,999<span class="period">/mo</span></div>
+          <p class="plan-desc">For growing organizations that need full AI power</p>
+          <ul class="plan-features">
+            <li>Up to 100 users</li>
+            <li>All Starter features</li>
+            <li>Data analysis & reports</li>
+            <li>Task automation</li>
+            <li>Real-time insights</li>
+            <li>API access</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#" class="btn-plan primary">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price">Custom</div>
+          <p class="plan-desc">For large organizations with custom requirements</p>
+          <ul class="plan-features">
+            <li>Unlimited users</li>
+            <li>All Business features</li>
+            <li>On-premise deployment</li>
+            <li>Custom integrations</li>
+            <li>Dedicated AI training</li>
+            <li>SLA guarantee</li>
+            <li>24/7 dedicated support</li>
+          </ul>
+          <a href="#" class="btn-plan">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CTA ═══════════════════════════ -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <div class="cta-orb cta-orb-1"></div>
+      <div class="cta-orb cta-orb-2"></div>
+    </div>
+    <div class="section-container">
+      <div class="cta-content">
+        <h2>Ready to make your enterprise <em>Nirbhar</em>?</h2>
+        <p>Join 500+ enterprises already transforming their operations with Nirbhar AI. Start your 30-day free trial today — no credit card required.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn-hero-primary">Start Free Trial</a>
+          <a href="#" class="btn-hero-ghost">Schedule a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo">
+            <div class="logo-mark small">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="footerGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#00E5FF"/><stop offset="100%" stop-color="#0066FF"/>
+                  </linearGradient>
+                </defs>
+                <path d="M20 4L34 12V28L20 36L6 28V12L20 4Z" stroke="url(#footerGrad)" stroke-width="2" fill="none"/>
+                <path d="M20 10L28 15V25L20 30L12 25V15L20 10Z" fill="url(#footerGrad)" opacity="0.3"/>
+                <circle cx="20" cy="20" r="4" fill="url(#footerGrad)"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Nirbhar</span>
+              <span class="logo-ai">AI</span>
+            </div>
+          </a>
+          <p class="footer-tagline">Enterprise Intelligence Powered by AI. Transforming how India's businesses operate, decide, and grow.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Platform</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#">Finance & Banking</a></li>
+              <li><a href="#">Manufacturing</a></li>
+              <li><a href="#">Healthcare</a></li>
+              <li><a href="#">Retail & FMCG</a></li>
+              <li><a href="#">Logistics</a></li>
+              <li><a href="#">HR & People Ops</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">API Reference</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Nirbhar AI. All rights reserved. Built in India 🇮🇳</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">GDPR</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
