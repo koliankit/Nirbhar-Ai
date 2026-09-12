@@ -264,10 +264,11 @@ if (chartBars.length > 0) {
 
 // ─── Typewriter for AI chat ─────────────────────────────────
 const chatMessages = [
-  "Q3 revenue is up 23%. Top driver: APAC region (+41%). Recommend expanding sales team.",
-  "Analyzed 847 invoices. 12 anomalies detected. Total risk exposure: ₹2.4L.",
-  "Employee satisfaction dropped 8% in Operations. Key issue: workload distribution.",
-  "Sales pipeline health: 78% on-track. 3 deals at risk — want a detailed breakdown?",
+  "Candidate #894: Multi-round WebRTC AI interview completed. Technical match: 96%.",
+  "Hyperledger Fabric: Block #18492019 minted with immutable credential verification.",
+  "FastAPI Orchestrator: 1,482 concurrent interview streams synced with MongoDB in 12ms.",
+  "Enterprise ERP Feed: Placement funnel optimization increased hire velocity by 4.2x.",
+  "Solidity Smart Contract: Candidate skills verified. Zero tampering detected across pipeline.",
 ];
 
 const chatText = document.querySelector('.chat-text');
@@ -281,10 +282,9 @@ function typeMessage() {
   if (charIndex < msg.length) {
     chatText.textContent = msg.substring(0, charIndex + 1);
     charIndex++;
-    setTimeout(typeMessage, 28);
+    setTimeout(typeMessage, 24);
   } else {
     setTimeout(() => {
-      // Clear and go to next message
       msgIndex = (msgIndex + 1) % chatMessages.length;
       charIndex = 0;
       chatText.style.opacity = '0';
@@ -292,7 +292,7 @@ function typeMessage() {
         chatText.style.opacity = '1';
         typeMessage();
       }, 400);
-    }, 3000);
+    }, 3200);
   }
 }
 
@@ -302,7 +302,6 @@ window.addEventListener('load', () => {
 });
 
 // ─── Logo text gradient animation ──────────────────────────
-// Periodically animate logo AI text
 const logoAI = document.querySelectorAll('.logo-ai');
 logoAI.forEach(el => {
   el.style.backgroundSize = '200% auto';
@@ -312,3 +311,228 @@ logoAI.forEach(el => {
     el.style.backgroundPosition = `${pos}% center`;
   }, 30);
 });
+
+// ═════════════════════════════════════════════════════════════
+// NIRBHAR AI: DEVELOPMENT & TECHNICAL STACK INTEGRATION LOGIC
+// ═════════════════════════════════════════════════════════════
+
+// ─── 1. Mind Map Tabs Interaction ───────────────────────────
+const mindmapTabs = document.querySelectorAll('.mindmap-tab');
+const mindmapCards = document.querySelectorAll('.mindmap-pillar-card');
+
+mindmapTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const branch = tab.dataset.branch;
+    
+    // Update active tab
+    mindmapTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Highlight matching card
+    mindmapCards.forEach(card => {
+      if (card.dataset.pillar === branch) {
+        card.classList.add('active');
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        card.classList.remove('active');
+      }
+    });
+  });
+});
+
+// ─── 2. Placement Lifecycle Stepper Interaction ─────────────
+const lifecycleData = {
+  "1": {
+    badge: "ACTIVE STAGE INSPECTION: STAGE 01",
+    title: "Systematic Candidate Onboarding & Profiling",
+    desc: "Upon registration, candidates enter an automated ingestion pipeline. Nirbhar AI extracts historical work, verified credentials, and educational milestones, creating a structured graph inside MongoDB while initializing ERP workforce planning.",
+    metric1: "1.8 Seconds",
+    metric2: "MongoDB BSON + FastAPI",
+    metric3: "AES-256 Encrypted"
+  },
+  "2": {
+    badge: "ACTIVE STAGE INSPECTION: STAGE 02",
+    title: "Multi-Round AI Interviews & Evaluation",
+    desc: "Candidates participate in structured real-time video/audio interviews powered by WebRTC & Twilio. The LangChain LLM engine asks dynamic contextual questions and measures speech sentiment, code syntax, and problem-solving agility.",
+    metric1: "4K Concurrent Streams",
+    metric2: "WebRTC + Twilio",
+    metric3: "PyTorch Benchmark Engine"
+  },
+  "3": {
+    badge: "ACTIVE STAGE INSPECTION: STAGE 03",
+    title: "AI Evaluation, Scoring & Matching",
+    desc: "Evaluation models compute multi-dimensional competency vectors. The decision support system matches candidates directly with verified enterprise job openings, scoring cultural fit, technical aptitude, and growth readiness.",
+    metric1: "99.4% Match Accuracy",
+    metric2: "FastAPI + LangChain",
+    metric3: "Multi-Round Scoring Matrix"
+  },
+  "4": {
+    badge: "ACTIVE STAGE INSPECTION: STAGE 04",
+    title: "Enterprise Placement & Blockchain Verification",
+    desc: "Matched candidates receive enterprise offers with immutable blockchain credential verification. Solidity smart contracts mint tamper-proof verification tokens and Hyperledger Fabric records the hiring audit trail.",
+    metric1: "100% Tamper Proof",
+    metric2: "Solidity + Hyperledger Fabric",
+    metric3: "PostgreSQL ERP Integration"
+  }
+};
+
+const stepCards = document.querySelectorAll('.step-card');
+const detailBadge = document.getElementById('detailBadge');
+const detailTitle = document.getElementById('detailTitle');
+const detailDesc = document.getElementById('detailDesc');
+const chipMetric1 = document.getElementById('chipMetric1');
+const chipMetric2 = document.getElementById('chipMetric2');
+const chipMetric3 = document.getElementById('chipMetric3');
+
+stepCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const step = card.dataset.step;
+    stepCards.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+
+    const data = lifecycleData[step];
+    if (data && detailBadge && detailTitle && detailDesc) {
+      detailBadge.textContent = data.badge;
+      detailTitle.textContent = data.title;
+      detailDesc.textContent = data.desc;
+      if (chipMetric1) chipMetric1.textContent = data.metric1;
+      if (chipMetric2) chipMetric2.textContent = data.metric2;
+      if (chipMetric3) chipMetric3.textContent = data.metric3;
+    }
+  });
+});
+
+// ─── 3. AI Interview Simulator ──────────────────────────────
+const roleSelector = document.getElementById('roleSelector');
+const simQuestionText = document.getElementById('simQuestionText');
+const simAnswerText = document.getElementById('simAnswerText');
+const scoreTech = document.getElementById('scoreTech');
+const scoreProblem = document.getElementById('scoreProblem');
+const scoreComm = document.getElementById('scoreComm');
+const barTech = document.getElementById('barTech');
+const barProblem = document.getElementById('barProblem');
+const barComm = document.getElementById('barComm');
+const btnSimulateEvaluation = document.getElementById('btnSimulateEvaluation');
+
+const roleQuestions = {
+  "ai-eng": [
+    {
+      q: '"Explain how you would design a high-throughput microservices architecture with FastAPI, WebSockets, and Redis for real-time candidate scoring."',
+      a: '"I would decouple the ingestion layer using FastAPI async handlers, stream events through Redis Pub/Sub, and persist evaluation embeddings using PyTorch in a background worker."',
+      scores: [96, 94, 91]
+    },
+    {
+      q: '"How would you mitigate bias and hallucination in an LLM-based candidate interview evaluation pipeline?"',
+      a: '"I would utilize LangChain with structured schema validation, few-shot ground truth rubrics, and consensus verification across dual-model scoring checkpoints."',
+      scores: [98, 96, 93]
+    }
+  ],
+  "fullstack": [
+    {
+      q: '"How do you optimize state hydration and real-time dashboard telemetry between Next.js SSR and Node.js Express microservices?"',
+      a: '"By employing server-side pre-fetching with React Server Components, client-side WebSocket subscriptions, and Redis caching for sub-100ms dashboard refreshes."',
+      scores: [95, 92, 89]
+    },
+    {
+      q: '"Describe your strategy for securing candidate data under zero-trust using OAuth 2.0 and AES-256."',
+      a: '"I implement short-lived asymmetric JWTs with refresh token rotation, encrypt data at rest via AES-GCM-256, and enforce TLS 1.3 across all service boundaries."',
+      scores: [97, 95, 94]
+    }
+  ],
+  "data-analyst": [
+    {
+      q: '"How would you analyze and optimize recruitment funnel conversion rates across candidate onboarding and placement stages?"',
+      a: '"I extract funnel event logs from PostgreSQL and MongoDB into our analytical warehouse, run cohort retention models, and surface drop-off bottlenecks in real-time dashboards."',
+      scores: [94, 96, 92]
+    }
+  ]
+};
+
+let currentQuestionIdx = 0;
+
+function updateRoleContent() {
+  const role = roleSelector?.value || 'ai-eng';
+  const list = roleQuestions[role] || roleQuestions['ai-eng'];
+  currentQuestionIdx = currentQuestionIdx % list.length;
+  const item = list[currentQuestionIdx];
+
+  if (simQuestionText && simAnswerText) {
+    simQuestionText.textContent = item.q;
+    simAnswerText.textContent = item.a;
+    if (scoreTech && barTech) {
+      scoreTech.textContent = item.scores[0] + '%';
+      barTech.style.width = item.scores[0] + '%';
+    }
+    if (scoreProblem && barProblem) {
+      scoreProblem.textContent = item.scores[1] + '%';
+      barProblem.style.width = item.scores[1] + '%';
+    }
+    if (scoreComm && barComm) {
+      scoreComm.textContent = item.scores[2] + '%';
+      barComm.style.width = item.scores[2] + '%';
+    }
+  }
+}
+
+roleSelector?.addEventListener('change', () => {
+  currentQuestionIdx = 0;
+  updateRoleContent();
+});
+
+btnSimulateEvaluation?.addEventListener('click', () => {
+  const role = roleSelector?.value || 'ai-eng';
+  const list = roleQuestions[role] || roleQuestions['ai-eng'];
+  currentQuestionIdx = (currentQuestionIdx + 1) % list.length;
+  
+  if (btnSimulateEvaluation) {
+    btnSimulateEvaluation.textContent = 'Analyzing Response via PyTorch & LangChain...';
+    btnSimulateEvaluation.disabled = true;
+  }
+
+  setTimeout(() => {
+    updateRoleContent();
+    if (btnSimulateEvaluation) {
+      btnSimulateEvaluation.textContent = 'Run Next AI Evaluation Round';
+      btnSimulateEvaluation.disabled = false;
+    }
+  }, 600);
+});
+
+// ─── 4. Blockchain Smart Contract Verifier ──────────────────
+const btnVerifyOnChain = document.getElementById('btnVerifyOnChain');
+const credentialHashInput = document.getElementById('credentialHashInput');
+const resStatus = document.getElementById('resStatus');
+const resBlock = document.getElementById('resBlock');
+const resContract = document.getElementById('resContract');
+const resConsensus = document.getElementById('resConsensus');
+
+btnVerifyOnChain?.addEventListener('click', () => {
+  const hash = credentialHashInput?.value.trim() || '0x7f4a9b8e210cd63e4129bb8401ee8291a0c4';
+  
+  if (btnVerifyOnChain) {
+    btnVerifyOnChain.textContent = 'Verifying with Hyperledger Fabric...';
+    btnVerifyOnChain.disabled = true;
+  }
+  
+  if (resStatus) {
+    resStatus.textContent = 'QUERYING DECENTRALIZED NODES...';
+    resStatus.style.color = '#00E5FF';
+  }
+
+  setTimeout(() => {
+    const randomBlock = Math.floor(18492000 + Math.random() * 5000);
+    if (resStatus) {
+      resStatus.textContent = 'VALIDATED (0x00 SUCCESS - ZERO TAMPER)';
+      resStatus.style.color = '#00FF88';
+    }
+    if (resBlock) resBlock.textContent = `#${randomBlock.toLocaleString()}`;
+    if (resContract) resContract.textContent = `NirbharCredentialVerify.sol (${hash.substring(0, 8)}...${hash.substring(hash.length - 4)})`;
+    if (resConsensus) resConsensus.textContent = 'Hyperledger Raft Consensus · 100% Peer Match';
+
+    if (btnVerifyOnChain) {
+      btnVerifyOnChain.textContent = 'Verify On-Chain';
+      btnVerifyOnChain.disabled = false;
+    }
+  }, 750);
+});
+

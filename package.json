@@ -1,7 +1,7 @@
 {
   "name": "nirbhar-ai",
   "version": "1.0.0",
-  "description": "Nirbhar AI — Enterprise Intelligence Powered by AI",
+  "description": "Nirbhar AI — Development & Technical Stack Integration: Enterprise Management, Employability Automation, AI Interviews, and Blockchain Verification",
   "main": "index.html",
   "homepage": "https://nirbhar.ai",
   "author": "Nirbhar AI Team",
@@ -16,10 +16,14 @@
   "keywords": [
     "nirbhar-ai",
     "enterprise-ai",
-    "ai-platform",
-    "business-intelligence",
-    "automation",
-    "conversational-ai"
+    "employability-automation",
+    "ai-interviews",
+    "webrtc",
+    "blockchain-verification",
+    "hyperledger-fabric",
+    "solidity",
+    "fastapi",
+    "langchain"
   ],
   "engines": {
     "node": ">=16.0.0"
@@ -30,7 +34,7 @@
   },
   "config": {
     "brand": "Nirbhar AI",
-    "tagline": "Enterprise Intelligence Powered by AI",
+    "tagline": "Development & Technical Stack Integration",
     "primaryColor": "#00E5FF",
     "accentColor": "#0066FF"
   }

@@ -1220,6 +1220,722 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; font-weight: 700; line-height:
 .footer-legal a { font-size: 13px; color: var(--text-muted); transition: color 0.2s ease; }
 .footer-legal a:hover { color: var(--text-secondary); }
 
+/* ─── NIRBHAR AI: Architecture Mind Map & Stack Styles ───── */
+.arch-mindmap-section,
+.lifecycle-section,
+.tech-stack-section,
+.ai-interview-section,
+.blockchain-section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+.arch-mindmap-section {
+  background: radial-gradient(circle at 50% 10%, rgba(0, 229, 255, 0.08), transparent 60%);
+}
+
+/* Mindmap Tabs */
+.mindmap-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.mindmap-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+.mindmap-tab:hover {
+  border-color: var(--cyan);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+.mindmap-tab.active {
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(0, 102, 255, 0.2));
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
+}
+
+/* Interactive Mindmap Visual & Cards */
+.mindmap-interactive-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+.mindmap-hub-center {
+  text-align: center;
+  position: relative;
+  max-width: 680px;
+}
+.hub-center-core {
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.9), rgba(7, 15, 30, 0.95));
+  border: 2px solid var(--cyan);
+  border-radius: 20px;
+  padding: 24px 32px;
+  box-shadow: 0 0 50px rgba(0, 229, 255, 0.2);
+  position: relative;
+}
+.hub-subtext {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--cyan);
+  text-transform: uppercase;
+}
+.hub-center-core h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 6px 0;
+  background: var(--grad-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hub-center-core p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Pillar Cards Grid */
+.mindmap-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+.mindmap-pillar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s var(--ease);
+  position: relative;
+}
+.mindmap-pillar-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card), 0 0 30px rgba(0, 229, 255, 0.12);
+}
+.mindmap-pillar-card.active {
+  border-color: var(--cyan);
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.18);
+}
+.pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.pillar-icon {
+  font-size: 28px;
+}
+.pillar-header h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+.pillar-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--cyan);
+  background: rgba(0, 229, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+.pillar-summary {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+.pillar-subbranches {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.subbranch-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 2px solid var(--cyan);
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+[data-theme="light"] .subbranch-item {
+  background: rgba(0, 102, 255, 0.04);
+}
+.subbranch-item.highlight {
+  border-left-color: #00FF88;
+  background: rgba(0, 255, 136, 0.05);
+}
+.subbranch-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 6px;
+}
+.subbranch-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+.subbranch-item li {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 4px;
+  line-height: 1.45;
+}
+.subbranch-item li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+}
+
+/* ─── Placement Lifecycle Stepper ──────────────────────────── */
+.lifecycle-section {
+  background: linear-gradient(180deg, transparent, rgba(7, 15, 30, 0.6), transparent);
+}
+.lifecycle-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.step-card {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  position: relative;
+}
+.step-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+}
+.step-card.active {
+  border-color: var(--cyan);
+  background: linear-gradient(145deg, var(--bg-card), rgba(0, 229, 255, 0.06));
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+}
+.step-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--cyan);
+  background: rgba(0, 229, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.step-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(0, 229, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  margin-bottom: 14px;
+}
+.step-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+.step-card h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+.step-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.step-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.lifecycle-arrow {
+  color: var(--cyan);
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.lifecycle-detail-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-card);
+}
+.detail-header {
+  margin-bottom: 16px;
+}
+.detail-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.detail-header h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+.detail-info {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.detail-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.metric-chip {
+  background: rgba(0, 229, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.chip-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+.chip-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ─── Tech Stack Foundations ───────────────────────────────── */
+.stack-layers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.stack-layer-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s var(--ease);
+}
+.stack-layer-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.12);
+}
+.layer-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.layer-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.15), rgba(0, 102, 255, 0.15));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+.layer-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+.layer-header h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+.layer-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.layer-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.layer-features li {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.layer-features strong {
+  color: var(--text-primary);
+}
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tech-tags span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid var(--border);
+  color: var(--cyan);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* ─── AI & Machine Learning Interview Simulator ────────────── */
+.ai-interview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+.interview-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.feature-item-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.25s var(--ease);
+}
+.feature-item-box:hover {
+  border-color: var(--cyan);
+  transform: translateX(4px);
+}
+.item-icon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+.feature-item-box h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.feature-item-box p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Simulator Card */
+.interview-simulator-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 60px rgba(0, 229, 255, 0.1);
+  overflow: hidden;
+}
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid var(--border);
+}
+.sim-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pulse-green {
+  width: 8px;
+  height: 8px;
+  background: #00FF88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00FF88;
+  animation: pulse-dot 1.5s infinite;
+}
+.sim-role-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.sim-select {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--cyan);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+}
+.sim-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sim-ai-prompt,
+.sim-response-box {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  border-left: 3px solid var(--cyan);
+}
+.sim-response-box {
+  border-left-color: var(--blue);
+}
+.sim-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+  display: block;
+  margin-bottom: 6px;
+}
+.sim-badge.candidate {
+  color: #00C4FF;
+}
+.sim-ai-prompt p,
+.sim-response-box p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+.sim-scores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 4px 0;
+}
+.score-card {
+  background: rgba(0, 229, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+.score-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  display: block;
+}
+.score-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cyan);
+  margin: 4px 0;
+  display: block;
+}
+.score-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.score-fill {
+  height: 100%;
+  background: var(--grad-brand);
+  border-radius: 2px;
+  transition: width 0.6s var(--ease);
+}
+.score-fill.w96 { width: 96%; }
+.score-fill.w94 { width: 94%; }
+.score-fill.w91 { width: 91%; }
+.btn-primary.full-width {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+}
+
+/* ─── Blockchain & Smart Contract Verifier ─────────────────── */
+.blockchain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.blockchain-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s var(--ease);
+}
+.blockchain-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+}
+.b-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(0, 229, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  margin-bottom: 16px;
+}
+.b-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.blockchain-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+.blockchain-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.blockchain-card li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.blockchain-card strong {
+  color: var(--text-primary);
+}
+
+/* Verifier Widget */
+.contract-verifier-widget {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 0 50px rgba(0, 102, 255, 0.12);
+}
+.verifier-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.verifier-top h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+.verifier-sub {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+.contract-status-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #00FF88;
+  background: rgba(0, 255, 136, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 255, 136, 0.25);
+}
+.verifier-input-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.verifier-input {
+  flex: 1;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--cyan);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.verifier-input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+.verifier-result-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+.res-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.res-key {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+}
+.res-val {
+  font-size: 13.5px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.res-val.green {
+  color: #00FF88;
+  font-weight: 600;
+}
+.res-val.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+}
+
 /* ─── Animations ─────────────────────────────────────────── */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(24px); }
@@ -1252,6 +1968,10 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; font-weight: 700; line-height:
   .feature-card.full-width { grid-column: span 2; }
   .platform-grid, .security-grid { grid-template-columns: 1fr; gap: 48px; }
   .platform-visual, .security-visual { order: -1; }
+  .mindmap-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .stack-layers-grid { grid-template-columns: repeat(2, 1fr); }
+  .blockchain-grid { grid-template-columns: repeat(2, 1fr); }
+  .ai-interview-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1270,6 +1990,13 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; font-weight: 700; line-height:
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .dashboard-window .window-body { height: 200px; }
   .dash-top-row { display: none; }
+  
+  .mindmap-cards-grid { grid-template-columns: 1fr; }
+  .stack-layers-grid { grid-template-columns: 1fr; }
+  .blockchain-grid { grid-template-columns: 1fr; }
+  .lifecycle-stepper { flex-direction: column; gap: 12px; }
+  .lifecycle-arrow { transform: rotate(90deg); margin: 4px 0; }
+  .verifier-result-box { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
@@ -1277,4 +2004,8 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; font-weight: 700; line-height:
   .hero-actions { flex-direction: column; }
   .btn-hero-primary, .btn-hero-ghost { width: 100%; justify-content: center; }
   .footer-links { grid-template-columns: 1fr; }
+  .verifier-input-bar { flex-direction: column; }
+  .hub-center-core { padding: 20px 16px; }
+  .hub-center-core h3 { font-size: 22px; }
 }
+
