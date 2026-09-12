@@ -297,6 +297,46 @@
         </button>
       </div>
 
+      <!-- Architecture Image Blueprint Viewer with <img> Element -->
+      <div class="arch-img-showcase" data-aos="fade-up">
+        <div class="arch-img-toolbar">
+          <div class="toolbar-left">
+            <span class="status-pulse-cyan"></span>
+            <span class="toolbar-label">PRIMARY ARCHITECTURE BLUEPRINT · OFFICIAL SYSTEM DIAGRAM</span>
+          </div>
+          <div class="toolbar-controls">
+            <button class="img-control-btn" id="btnZoomIn" title="Zoom In">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              <span>Zoom In</span>
+            </button>
+            <button class="img-control-btn" id="btnZoomOut" title="Zoom Out">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              <span>Zoom Out</span>
+            </button>
+            <button class="img-control-btn" id="btnZoomReset" title="Reset Zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              <span>Reset</span>
+            </button>
+            <button class="img-control-btn highlight" id="btnOpenLightbox" title="Open Fullscreen">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              <span>Fullscreen</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="arch-img-viewport" id="archImgViewport">
+          <img 
+            id="archMindmapImg" 
+            src="assets/nirbhar-ai-architecture.jpg" 
+            alt="NIRBHAR AI: Development and Technical Stack Integration Mind Map" 
+            class="arch-blueprint-img"
+          />
+          <div class="img-overlay-caption">
+            <span>Click image to view high-resolution fullscreen · Scroll or use controls to zoom</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Interactive Mind Map Visual Representation -->
       <div class="mindmap-interactive-view">
         <div class="mindmap-hub-center">
@@ -1149,6 +1189,28 @@
       </div>
     </div>
   </footer>
+
+  <!-- Lightbox Modal for Architecture Image -->
+  <div class="img-lightbox-modal" id="imgLightboxModal">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <span class="lightbox-title">NIRBHAR AI: Development & Technical Stack Integration (Full Resolution Blueprint)</span>
+        <button class="lightbox-close-btn" id="btnCloseLightbox" aria-label="Close Lightbox">✕</button>
+      </div>
+      <div class="lightbox-body" id="lightboxBody">
+        <img 
+          id="lightboxImg" 
+          src="assets/nirbhar-ai-architecture.jpg" 
+          alt="NIRBHAR AI Architecture Fullscreen Blueprint" 
+          class="lightbox-image" 
+        />
+      </div>
+      <div class="lightbox-footer">
+        <span>Click anywhere or press Escape to close · High-Resolution Architecture Blueprint</span>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

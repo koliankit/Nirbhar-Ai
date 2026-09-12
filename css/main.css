@@ -1268,6 +1268,213 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; font-weight: 700; line-height:
   box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
 }
 
+/* ─── Architecture Image Blueprint Showcase ──────────────── */
+.arch-img-showcase {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 60px rgba(0, 229, 255, 0.12);
+  overflow: hidden;
+  margin-bottom: 48px;
+  position: relative;
+}
+.arch-img-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 24px;
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid var(--border);
+}
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.status-pulse-cyan {
+  width: 9px;
+  height: 9px;
+  background: var(--cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--cyan);
+  animation: pulse-dot 1.8s infinite;
+}
+.toolbar-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  color: var(--cyan);
+  font-weight: 600;
+}
+.toolbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.img-control-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+.img-control-btn svg {
+  width: 14px;
+  height: 14px;
+}
+.img-control-btn:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(0, 229, 255, 0.1);
+}
+.img-control-btn.highlight {
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(0, 102, 255, 0.2));
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.img-control-btn.highlight:hover {
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+.arch-img-viewport {
+  position: relative;
+  background: #02060e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  cursor: zoom-in;
+  min-height: 380px;
+}
+.arch-blueprint-img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 229, 255, 0.15);
+  transition: transform 0.25s var(--ease);
+  transform-origin: center center;
+  display: block;
+}
+.img-overlay-caption {
+  position: absolute;
+  bottom: 12px;
+  background: rgba(3, 8, 16, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ─── Lightbox Modal ─────────────────────────────────────── */
+.img-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.img-lightbox-modal.open {
+  display: flex;
+  opacity: 1;
+}
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 14, 0.94);
+  backdrop-filter: blur(12px);
+}
+.lightbox-container {
+  position: relative;
+  z-index: 1;
+  max-width: 96vw;
+  max-height: 94vh;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8), 0 0 100px rgba(0, 229, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.lightbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.3);
+}
+.lightbox-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.lightbox-close-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.lightbox-close-btn:hover {
+  background: rgba(255, 0, 85, 0.2);
+  border-color: #FF0055;
+  color: #FF0055;
+}
+.lightbox-body {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background: #01040a;
+}
+.lightbox-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+.lightbox-footer {
+  padding: 12px 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid var(--border);
+}
+
+
 /* Interactive Mindmap Visual & Cards */
 .mindmap-interactive-view {
   display: flex;

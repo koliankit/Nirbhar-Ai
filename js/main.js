@@ -536,3 +536,76 @@ btnVerifyOnChain?.addEventListener('click', () => {
   }, 750);
 });
 
+// ─── 5. Architecture Image Blueprint Zoom & Lightbox ────────
+const archMindmapImg = document.getElementById('archMindmapImg');
+const archImgViewport = document.getElementById('archImgViewport');
+const btnZoomIn = document.getElementById('btnZoomIn');
+const btnZoomOut = document.getElementById('btnZoomOut');
+const btnZoomReset = document.getElementById('btnZoomReset');
+const btnOpenLightbox = document.getElementById('btnOpenLightbox');
+const imgLightboxModal = document.getElementById('imgLightboxModal');
+const btnCloseLightbox = document.getElementById('btnCloseLightbox');
+const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+
+let currentImgScale = 1.0;
+
+function applyImgScale() {
+  if (archMindmapImg) {
+    archMindmapImg.style.transform = `scale(${currentImgScale})`;
+    archMindmapImg.style.cursor = currentImgScale > 1 ? 'grab' : 'zoom-in';
+  }
+}
+
+btnZoomIn?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (currentImgScale < 2.5) {
+    currentImgScale += 0.25;
+    applyImgScale();
+  }
+});
+
+btnZoomOut?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (currentImgScale > 0.8) {
+    currentImgScale -= 0.25;
+    applyImgScale();
+  }
+});
+
+btnZoomReset?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentImgScale = 1.0;
+  applyImgScale();
+});
+
+// Lightbox Open/Close
+function openLightbox() {
+  if (imgLightboxModal) {
+    imgLightboxModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeLightbox() {
+  if (imgLightboxModal) {
+    imgLightboxModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+btnOpenLightbox?.addEventListener('click', openLightbox);
+archMindmapImg?.addEventListener('click', () => {
+  if (currentImgScale === 1.0) {
+    openLightbox();
+  }
+});
+btnCloseLightbox?.addEventListener('click', closeLightbox);
+lightboxBackdrop?.addEventListener('click', closeLightbox);
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && imgLightboxModal?.classList.contains('open')) {
+    closeLightbox();
+  }
+});
+
+
