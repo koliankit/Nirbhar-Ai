@@ -9,9 +9,7 @@
   "private": true,
   "scripts": {
     "start": "npx serve .",
-    "dev": "npx live-server --port=3000 --open=index.html",
-    "build": "echo 'Static project — no build required'",
-    "lint": "echo 'Add linting as needed'"
+    "dev": "npx live-server --port=3000 --open=index.html"
   },
   "keywords": [
     "nirbhar-ai",
