@@ -1,7 +1,7 @@
 {
   "name": "nirbhar-ai",
-  "version": "1.0.0",
-  "description": "Nirbhar AI — Development & Technical Stack Integration: Enterprise Management, Employability Automation, AI Interviews, and Blockchain Verification",
+  "version": "2.0.0",
+  "description": "NIRBHAR AI — Career & Opportunity Intelligence with Employability Automation: AI Guide to Jobs, Internships, Scholarships & Provenance",
   "main": "index.html",
   "homepage": "https://nirbhar.ai",
   "author": "Nirbhar AI Team",
@@ -13,15 +13,17 @@
   },
   "keywords": [
     "nirbhar-ai",
-    "enterprise-ai",
+    "career-intelligence",
+    "opportunity-discovery",
     "employability-automation",
-    "ai-interviews",
-    "webrtc",
-    "blockchain-verification",
-    "hyperledger-fabric",
-    "solidity",
+    "ai-career-assistant",
+    "resume-ats-analyzer",
+    "ai-mock-interviews",
+    "skills-roadmap",
+    "application-tracker",
+    "zero-trust-provenance",
     "fastapi",
-    "langchain"
+    "pytorch"
   ],
   "engines": {
     "node": ">=16.0.0"
@@ -31,8 +33,8 @@
     "serve": "^14.0.0"
   },
   "config": {
-    "brand": "Nirbhar AI",
-    "tagline": "Development & Technical Stack Integration",
+    "brand": "NIRBHAR AI",
+    "tagline": "Your AI Guide to Opportunities",
     "primaryColor": "#00E5FF",
     "accentColor": "#0066FF"
   }
